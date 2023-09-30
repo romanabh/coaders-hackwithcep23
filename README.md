@@ -1,13 +1,13 @@
 ![image](./assets/HACK%20WITH%20CEP%2023%20(1).png)
 
-# {project name} - hack with cep 23
+# {Go green} - hack with cep 23
 Tell us about your project here
 
 ## Team Members
-[1.Team Member 1](enter_github_profile_url)   
-[2.Team Member 2](enter_github_profile_url)   
-[3.Team Member 3](enter_github_profile_url)   
-[4.Team Member 4](enter_github_profile_url)   
+[1.Anand.s](https://github.com/anand311203)   
+[2.Abhimanyu.s.s](enter_github_profile_url)   
+[3.Abin johny](https://github.com/abinQ1/abinQ1.git)   
+[4.Aaron john](enter_github_profile_url)   
 
 ## Link to Project
 [Embed the live link of project](live_link)
@@ -17,13 +17,15 @@ Explaining the working of project
 Embed video of project demo
 
 ## Technologies used
-List out tech stacks you have used
+.HTML
+.CSS
+.JS
 
 ## How to configure
-Instructions for setting up project
+.open in live server
 
 ## How to Run
-Instructions for running
+local server
 
 ## Other Links
 Provide any other links ( for eg. Wireframe , UI )
