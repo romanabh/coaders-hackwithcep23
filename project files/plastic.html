@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 30px
+            ;
+            background-color: #f5fc8d;
+            font-style:oblique;
+            
+            
+        }
+        .item {
+            display: flex;
+        
+            margin: 10px;
+            text-align: center;
+            padding-left:183px;
+            font-size: 39px;
+            padding-left: 394px;
+            padding-top: 94px;
+
+        }
+        .item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 102px;
+            width: 136px;
+            height: 124px;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            font-size: 72px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <u>
+    <h1><center> Plastic collection</center></h1>
+    </u>
+
+    <div class="item">
+     
+      <img src="plastic-pet-bottle-500x500-1.webp" alt="Plastic Bottle">
+        <span>Plastic Bottles:</span>
+        <div class="controls">
+            <button onclick="decrement('bottles')">-</button>
+         <span id="bottles">0</span>
+            <button onclick="increment('bottles')">+</button>
+        
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="ungal-kadai-karaikal-ho-karaikal-plastic-bag-dealers-2y2vz99-250.webp" alt="Plastic Cover">
+        <span>Plastic Covers:</span>
+        <div class="controls">
+            <button onclick="decrement('covers')">-</button>
+            <span id="covers">0</span>
+            <button onclick="increment('covers')">+</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="Post-Consumer-Plastik-Abfall-2048x1536.jpg.webp" alt="Others">
+        <span>Others:</span>
+        <div class="controls">
+            <button onclick="decrement('others')">-</button>
+            <span id="others">0</span>
+            <button onclick="increment('others')">+</button>
+        </div>
+    </div>
+
+    <h1><center>Total Weight: <span id="totalWeight">0</span> grams</center></h1>
+    
+
+    
+
+    <form>
+        <center><label for="uniquecode">Unique Code:</label></center>
+       <center> <input type="text" id="uniquecode" name="uniquecode"></center>
+    </form>
+
+    
+    <form >
+        
+        <center><input size=100px type="submit" value="Submit"></center>
+    </form>
+    
+
+
+
+
+
+    <script>
+        let quantities = {
+            bottles: 0,
+            covers: 0,
+            others: 0
+        };
+
+        const weights = {
+            bottles: 20,  // Adjust the weight for each item type
+            covers: 5,
+            others: 10
+        };
+
+        function updateTotalWeight() {
+            let totalWeight = 0;
+            for (const item in quantities) {
+                totalWeight += quantities[item] * weights[item];
+            }
+            document.getElementById('totalWeight').textContent = totalWeight + ' grams';
+        }
+
+        function increment(item) {
+            quantities[item]++;
+            document.getElementById(item).textContent = quantities[item];
+            updateTotalWeight();
+        }
+
+        function decrement(item) {
+            if (quantities[item] > 0) {
+                quantities[item]--;
+                document.getElementById(item).textContent = quantities[item];
+                updateTotalWeight();
+            }
+        }
+    </script>
+</body>
+</html>
